@@ -26,3 +26,12 @@ body {
     padding: 10px;
     width: 75%;
 }
+
+a:hover{
+    background-color: purple;
+    color: greenyellow;
+}
+
+a {
+    text-decoration: none;
+}
