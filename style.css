@@ -35,3 +35,29 @@ a:hover{
 a {
     text-decoration: none;
 }
+
+
+
+
+/* Ekran genişliği 768 piksel veya daha küçükse (yani cep telefonlarındaysak) bu kurallar çalışsın: */
+@media (max-width: 768px) {
+    
+    #anabaslik {
+        width: 100%;       /* Mobilde tüm ekranı kaplasın */
+        float: none;       /* Sağa kayma sevdasından vazgeçsin */
+        font-size: 35px;   /* Ekrandan taşmasın diye yazı boyutu biraz küçülsün */
+        text-align: center;
+    }
+
+    #sidebar {
+        width: 100%;       /* Mobilde sıkışmasın, ekranı tam kaplasın */
+        float: none;       /* Sola yanaşma kuralını sıfırladık */
+        height: auto;      /* Bilgisayardaki o 1000px'lik kuleyi iptal ettik, içindeki yazı kadar uzasın */
+        margin-bottom: 20px; /* Altına gelecek yeşil yazıyla bitişmesin diye alt boşluk */
+    }
+
+    #giris_yazisi {
+        width: 100%;       /* Yeşil yazı da mobilde tüm ekranı kaplasın */
+        float: none;       /* Sağa yaslanmayı bıraksın */
+    }
+}
