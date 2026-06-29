@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="anabaslik">OpSec HAKKINDA</h1>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="sidebar_links/google_hayat_cikar.html"></a>Google'ı Hayatımızdan Çıkarmak</li>
+            <li>Tehdit Modellemesi</li>
+            <li>Paranoyak Seviye OpSec</li>
+        </ul>
+    </div>
+
+    <div id="giris_yazisi">
+        <p>
+            Paranoyak Seviye OpSec: Dijital Dünyada Bir Hayalet Olmak
+
+            Eğer tehdit modellemenizi yaptıysanız ve karşınızdaki düşmanın sıradan bir şirket değil, sınırsız bütçeye ve
+            insan gücüne sahip istihbarat servisleri veya devlet ajanları olduğuna karar verdiyseniz, standart güvenlik
+            önlemleri sizi kurtarmaz. Bu seviyede "güvenli web sitesi" veya "güvenli şifre" diye bir şey yoktur; tek bir
+            kural vardır: Sıfır Güven (Zero Trust). Paranoyak seviye OpSec, dijital dünyada arkanızda hiçbir iz
+            bırakmamak, hatta fiziksel dünyadaki varlığınızla dijitaldeki gölgeniz arasındaki bağı atomlarına kadar
+            parçalamaktır. Bir hayalet gibi yaşamak istiyorsanız, uymanız gereken ekstrem kurallar şunlardır:
+            1. Amnezik (Hafızasız) İşletim Sistemleri
+
+            Bu seviyede sabit disk (SSD/HDD) kullanmak en büyük suçtur. Çünkü şifrelenmiş olsa bile bir disk, fiziksel
+            olarak ele geçirildiğinde adli bilişim uzmanları için bir hedef tahtasıdır.
+
+            Çözüm: Bilgisayarı hiçbir veriyi diske yazmayan, her şeyi geçici bellek (RAM) üzerinde çalıştıran Tails OS
+            veya veri izolasyonunun zirvesi olan Qubes OS (Whonix entegreli) ile açmalısınız. Bilgisayarın gücünü
+            kestiğiniz veya USB'yi çektiğiniz an, o bilgisayarda saniyeler önce ne yaptığınıza dair evrende tek bir bit
+            bile veri kalmaz. Sistem tamamen hafızasını kaybeder.
+
+            2. Donanım Seviyesinde Arka Kapıları Kapatmak
+
+            Sıfır kutusundan yeni çıkardığınız modern bir bilgisayar, aslında fabrikadan çıktığı an gözetim altındadır.
+            Intel işlemcilerde Intel ME (Management Engine), AMD işlemcilerde ise AMD PSP adında, işletim sisteminden
+            bağımsız çalışan ve dışarıdan müdahaleye izin veren donanmsal arka kapılar bulunur.
+
+            Çözüm: İşlemcinin bu casus modüllerini yazılımsal olarak sakatlamak ve anakarttaki orijinal BIOS'u silip
+            yerine tamamen açık kaynaklı, tersine mühendislikle temizlenmiş Coreboot veya Libreboot flaşlamak şarttır.
+            Kamerayı siyah bantla kapatmak yetmez; mikrofon, kamera ve Wi-Fi kartı anakarttan fiziksel olarak sökülmeli
+            veya lehimleri eritilerek iptal edilmelidir.
+
+            3. Ağ Güvenliğinin Ötesi: Sinyal İzolasyonu
+
+            Ev internetiniz (Fiber/ADSL) doğrudan adınıza kayıtlıdır. Kendi evinizden Tor ağına bağlansanız bile, servis
+            sağlayıcınız "Tor kullandığınızı" görür ve bu bile sizi şüpheli listesine sokmaya yeter.
+
+            Çözüm: İnternete asla kendi evinizden veya mobil hattınızdan bağlanamazsınız. Kilometrelerce uzaktaki
+            kameralı kör noktalardan, nakit parayla satın alınmış modifiye edilmiş yüksek kazançlı antenlerle halka açık
+            Wi-Fi ağlarına sızmanız gerekir. Bu esnada cihazınızın MAC adresi (fiziksel kimliği) her saniye otomatik
+            olarak rastgele değiştirilmeli ve ağ trafiği Whonix üzerinden tünellenerek Tor ağına basılmalıdır.
+
+            4. Metaveri İmhası ve Stilometri Saldırıları
+
+            İnternete yüklediğiniz bir belgenin veya fotoğrafın sadece içindeki veriyi silmek sizi gizlemez. Yazdığınız
+            kodun veya Türkçe metnin tarzı bile sizin kimliğinizi ele verebilir. Buna Stilometri denir; kullandığınız
+            kelimeler, noktalama işaretleri ve kelime diziliminiz tıpkı parmak iziniz gibidir.
+
+            Çözüm: Paylaşacağınız her türlü metni önce yapay zeka araçlarıyla tamamen farklı bir tarza (örneğin resmi
+            bir dilden sokak ağzına veya tam tersine) çevirmeli, ardından metni birkaç farklı dile (Türkçe -> Svahili
+            dili -> Japonca -> İngilizce) çevirip en son yayınlamalısınız. Dosyaların gizli damgaları olan tüm Exif ve
+            metaverileri ise daha sisteme yüklenmeden dijital olarak parçalanmalıdır.
+
+            5. Dijital Ölü Adam Kimliği (Compartmentalization)
+
+            Gerçek hayatınızdaki Şoreş ile internetteki sahte kimliğiniz (persona) arasında hiçbir köprü bulunmamalıdır.
+
+            Çözüm: Gerçek hayatta dinlediğiniz rap müzikleri, tuttuğunuz takımı, hatta Diyarbakır'ın yerel saat dilimini
+            bile sahte kimliğinizde asla belli edemezsiniz. İnternetteki hayalet karakteriniz tamamen farklı bir ülkede
+            yaşıyormuş, farklı bir dilde konuşuyormuş gibi davranmalıdır. Gerçek hayatta uyuduğunuz saatlerde sahte
+            karakteriniz de "uyuyor" süsü vermeli, yani iki kimliğin çevrimiçi olma saatleri asla birbiriyle
+            çakışmamalıdır.
+
+            Özetle; Paranoyak seviye OpSec, hayat kalitenizi sıfıra indiren ama karşılığında size mutlak gizlilik sunan
+            bir yaşam tarzıdır. Bu seviyede hata payı sıfırdır. Tek bir anlık dalgınlık, gerçek kimliğinizin ipucunu
+            sisteme sızdırır ve ördüğünüz tüm duvarları bir iskambil kağıdı gibi yıkar.
+
+            Yazı bitti moruk. HTML'deki o efsane float taktiğimiz sayesinde bu uzun yazı da sayfada hiç sırıtmadan, sol
+            taraftaki o kırmızı çerçeveli sidebar'ın yanında şıkır şıkır duracak.
+        </p>
+    </div>
+
+</body>
+
+</html>
